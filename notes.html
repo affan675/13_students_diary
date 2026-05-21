@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome! ✨ Student Diary</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/notes.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/context-menu.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="light">
+  <div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-emojis">
+      <span class="emoji pen">✒️</span>
+      <span class="emoji page">📄</span>
+    </div>
+    <h1 class="preloader-title">Student Diary & Notes</h1>
+    <p class="preloader-tagline">Your daily companion</p>
+    <div class="preloader-progress-bar">
+      <div class="progress-fill" id="preloader-fill"></div>
+    </div>
+    <p class="preloader-counter"><span id="preloader-percent">0</span>%</p>
+  </div>
+</div>
+  <div id="main-content" class="fade-in">
+    <header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="logo">📖 Student Diary</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="notes.html" class="active">Notes</a></li>
+          <li><a href="output.html">Output</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="creator.html">Creator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="notes-add card">
+        <h2>New Note</h2>
+        <form id="note-form">
+          <input type="hidden" id="edit-note-id">
+          <label for="note-title">Title</label>
+          <input type="text" id="note-title" required>
+          <label for="note-content">Content</label>
+          <textarea id="note-content" rows="6" required></textarea>
+          <button type="submit" class="btn primary-btn">Save Note</button>
+          <button type="button" id="cancel-note-edit" class="btn secondary-btn" style="display:none;">Cancel</button>
+        </form>
+      </section>
+      <section class="notes-list card">
+        <h2>My Notes</h2>
+        <div id="notes-container"></div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Student Diary & Notes | Affan Adil</p>
+    </footer>
+  </div>
+  <div id="context-menu" class="context-menu" style="display:none;"></div>
+  <div id="toast-container" class="toast-container"></div>
+  <script src="js/common.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/custom-cursor.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/context-menu.js"></script>
+  <script src="js/click-sound.js"></script>
+  <script src="js/tab-title.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/achievements.js"></script>
+</body>
+</html>

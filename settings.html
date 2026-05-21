@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome! ✨ Student Diary</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/context-menu.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="light">
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-emojis">
+        <span class="emoji pen">✒️</span>
+        <span class="emoji page">📄</span>
+      </div>
+      <h1 class="preloader-title">Student Diary & Notes</h1>
+      <p class="preloader-tagline">Your daily companion</p>
+      <div class="preloader-progress-bar">
+        <div class="progress-fill" id="preloader-fill"></div>
+      </div>
+      <p class="preloader-counter"><span id="preloader-percent">0</span>%</p>
+    </div>
+  </div>
+  <div id="main-content" class="fade-in">
+    <header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="logo">📖 Student Diary</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="output.html">Output</a></li>
+          <li><a href="settings.html" class="active">Settings</a></li>
+          <li><a href="creator.html">Creator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="tabs-container">
+        <button class="tab-btn active" data-tab="settings">⚙️ Settings</button>
+        <button class="tab-btn" data-tab="guide">📘 Guide</button>
+        <button class="tab-btn" data-tab="profile">🏆 Profile</button>
+      </div>
+
+      <!-- Settings Tab -->
+      <section id="tab-settings" class="tab-content active">
+        <div class="settings-section card">
+          <h2>Preferences</h2>
+          <div class="setting-item">
+            <span>Theme: </span>
+            <button id="toggle-theme" class="btn primary-btn">Switch to Dark</button>
+          </div>
+          <div class="setting-item">
+            <span>Sound: </span>
+            <button id="toggle-sound" class="btn primary-btn">Sound ON</button>
+          </div>
+        </div>
+        <div class="settings-section card">
+          <h2>Data Management</h2>
+          <div class="data-buttons">
+            <button id="export-data" class="btn primary-btn">Export All Data (JSON)</button>
+            <button id="import-data" class="btn primary-btn">Import Data (JSON)</button>
+            <input type="file" id="import-file" accept=".json" style="display:none;">
+            <button id="clear-data" class="btn danger-btn">Clear All Data</button>
+            <button id="reset-sample" class="btn secondary-btn">Reset to Sample Data</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guide Tab -->
+      <section id="tab-guide" class="tab-content">
+        <div class="guide-section card">
+          <h2>Keyboard Shortcuts</h2>
+          <ul class="shortcut-list">
+            <li><kbd>T</kbd> – Toggle Theme</li>
+            <li><kbd>D</kbd> – Dashboard</li>
+            <li><kbd>I</kbd> – Diary</li>
+            <li><kbd>N</kbd> – Notes</li>
+            <li><kbd>O</kbd> – Output</li>
+            <li><kbd>S</kbd> – Settings</li>
+            <li><kbd>C</kbd> – Creator</li>
+            <li><kbd>E</kbd> – Export Data (from settings)</li>
+            <li><kbd>Ctrl+H</kbd> – Show Help</li>
+            <li><kbd>Esc</kbd> – Close Modals</li>
+          </ul>
+        </div>
+        <div class="guide-section card">
+          <h2>Features</h2>
+          <ul class="feature-list">
+            <li>📔 **Diary** – Write daily entries with mood tracking</li>
+            <li>📝 **Notes** – Create, edit, and search notes</li>
+            <li>📄 **Output Viewer** – Read your documents with scroll progress & search</li>
+            <li>🌓 **Dark Mode** – Toggle with particle effects</li>
+            <li>🖱️ **Custom Cursor** – Magnetic ring & dot</li>
+            <li>🔊 **Click Sounds** – Optional sound feedback</li>
+            <li>🖱️ **Right‑Click Menu** – Quick navigation and actions</li>
+            <li>⌨️ **Keyboard Shortcuts** – Navigate faster</li>
+            <li>🏆 **Achievements** – 80+ milestones to unlock</li>
+            <li>💾 **Data Export/Import** – Backup your data as JSON</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Profile Tab (Achievements) -->
+      <section id="tab-profile" class="tab-content">
+        <div class="profile-section card">
+          <h2>Your Achievements</h2>
+          <div id="achievements-list"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Student Diary & Notes | Affan Adil</p>
+    </footer>
+  </div>
+  <div id="context-menu" class="context-menu" style="display:none;"></div>
+  <div id="toast-container" class="toast-container"></div>
+  <!-- Load achievements.js BEFORE settings.js to ensure definitions exist -->
+  <script src="js/common.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/achievements.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/custom-cursor.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/context-menu.js"></script>
+  <script src="js/click-sound.js"></script>
+  <script src="js/tab-title.js"></script>
+  <script src="js/particles.js"></script>
+</body>
+</html>

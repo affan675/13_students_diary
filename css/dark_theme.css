@@ -1,0 +1,48 @@
+/* Enhanced dark mode overrides */
+.dark .card {
+  background: rgba(30, 30, 60, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.dark .btn {
+  color: #fff;
+}
+.dark .primary-btn {
+  background-image: linear-gradient(45deg, #00d2ff, #3a7bd5);
+}
+.dark .cursor-ring {
+  border-color: #00d2ff;
+}
+.dark .cursor-ring.magnetic {
+  background: rgba(0, 210, 255, 0.2);
+  border-color: #ff6b9d;
+}
+.dark .nav-links a {
+  color: #c0c0ff;
+}
+.dark .nav-links a.active,
+.dark .nav-links a:hover {
+  background: linear-gradient(135deg, #00d2ff, #ff6b9d);
+  color: #fff;
+}
+.dark input, .dark textarea, .dark select {
+  background: rgba(20,20,40,0.8);
+  color: #fff;
+  border-color: rgba(0,210,255,0.3);
+}
+.dark input:focus, .dark textarea:focus, .dark select:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 15px rgba(0,210,255,0.4);
+}
+.dark .recent-item:hover {
+  background: rgba(0,210,255,0.1);
+}
+.dark .note-card:hover {
+  background: rgba(0,210,255,0.1);
+}
+.dark .achievement-badge {
+  background: rgba(0,210,255,0.1);
+}
+.dark .dashboard-hero {
+  background: linear-gradient(135deg, rgba(0,210,255,0.15), rgba(255,107,157,0.15));
+}

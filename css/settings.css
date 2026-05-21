@@ -1,0 +1,131 @@
+.tabs-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+
+.tab-content {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.settings-section {
+  margin: 1.5rem auto;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.data-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.data-buttons .btn {
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+
+.guide-section {
+  margin: 1.5rem auto;
+}
+
+.shortcut-list,
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.shortcut-list li,
+.feature-list li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.shortcut-list kbd {
+  background: var(--primary);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.profile-section {
+  margin: 1.5rem auto;
+}
+
+#achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.achievement-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.achievement-badge:hover {
+  background: rgba(108,99,255,0.15);
+}
+
+.achievement-badge.locked {
+  opacity: 0.5;
+  filter: grayscale(0.5);
+}
+
+/* Fix button styling for theme/sound buttons */
+#toggle-theme,
+#toggle-sound {
+  color: white;
+}

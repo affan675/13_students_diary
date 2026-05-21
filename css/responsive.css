@@ -1,0 +1,150 @@
+/* The layout part remains mostly the same, but I adjusted some colors to match the new scheme */
+/* Mobile first: base styles already in main.css */
+@media (max-width: 600px) {
+  .main-nav {
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 0 0 16px 16px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .dashboard-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .diary-add, .diary-list, .notes-add, .notes-list, .output-select, .document-viewer, .viewer-controls, .settings-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .recent-section {
+    margin: 1rem;
+  }
+  .viewer-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .creator-card {
+    margin: 1rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+  .dashboard-stats {
+    justify-content: center;
+  }
+  .diary-add, .diary-list, .notes-add, .notes-list, .output-select, .document-viewer {
+    max-width: 90%;
+  }
+}
+@media (min-width: 1025px) {
+  .nav-toggle {
+    display: none;
+  }
+  .diary-add, .diary-list, .notes-add, .notes-list, .output-select, .document-viewer {
+    max-width: 800px;
+  }
+}
+@media (max-width: 400px) {
+  .preloader-title {
+    font-size: 1.8rem;
+  }
+  .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Creator Page Full-Width & Grid ---------- */
+@media (max-width: 600px) {
+  .creator-hero {
+    padding: 2.5rem 1rem 2rem;
+    border-radius: 0 0 30px 30px;
+  }
+  .hero-emoji {
+    font-size: 4rem;
+  }
+  .creator-hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .creator-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .creator-hero {
+    padding: 3rem 1.5rem;
+  }
+  .creator-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* ---------- Settings Tabs Wrapping ---------- */
+@media (max-width: 480px) {
+  .tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tab-btn {
+    width: 100%;
+  }
+  .data-buttons {
+    flex-direction: column;
+  }
+  .data-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Achievements List Centering ---------- */
+@media (max-width: 500px) {
+  #achievements-list {
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- Dashboard "Read" Buttons ---------- */
+@media (max-width: 600px) {
+  .recent-item a.read-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ---------- Settings / Guide lists touch-friendly ---------- */
+@media (max-width: 600px) {
+  .shortcut-list li,
+  .feature-list li {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

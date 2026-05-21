@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome! ✨ Student Diary</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/context-menu.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="light">
+  <div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-emojis">
+      <span class="emoji pen">✒️</span>
+      <span class="emoji page">📄</span>
+    </div>
+    <h1 class="preloader-title">Student Diary & Notes</h1>
+    <p class="preloader-tagline">Your daily companion</p>
+    <div class="preloader-progress-bar">
+      <div class="progress-fill" id="preloader-fill"></div>
+    </div>
+    <p class="preloader-counter"><span id="preloader-percent">0</span>%</p>
+  </div>
+</div>
+  <div id="main-content" class="fade-in">
+    <header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="logo">📖 Student Diary</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="output.html" class="active">Output</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="creator.html">Creator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="output-select card">
+        <h2>Document Viewer</h2>
+        <label for="doc-select">Choose a document</label>
+        <select id="doc-select">
+          <option value="">-- Select --</option>
+        </select>
+      </section>
+      <div class="viewer-controls">
+        <button id="font-increase" class="btn icon-btn">A+</button>
+        <button id="font-decrease" class="btn icon-btn">A-</button>
+        <input type="text" id="search-input" placeholder="Search in document...">
+        <button id="export-txt" class="btn primary-btn">Export TXT</button>
+        <button id="export-json" class="btn primary-btn">Export JSON</button>
+      </div>
+      <div class="progress-bar-container">
+        <div id="scroll-progress" class="scroll-progress-fill"></div>
+      </div>
+      <div id="document-viewer" class="document-viewer card">
+        <div id="viewer-content"></div>
+      </div>
+    </main>
+    <footer>
+      <p>© 2025 Student Diary & Notes | Affan Adil</p>
+    </footer>
+  </div>
+  <div id="context-menu" class="context-menu" style="display:none;"></div>
+  <div id="toast-container" class="toast-container"></div>
+  <script src="js/common.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/output.js"></script>
+  <script src="js/custom-cursor.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/context-menu.js"></script>
+  <script src="js/click-sound.js"></script>
+  <script src="js/tab-title.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/achievements.js"></script>
+</body>
+</html>

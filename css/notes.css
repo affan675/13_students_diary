@@ -1,0 +1,41 @@
+.notes-add {
+  max-width: 700px;
+}
+.notes-add form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.notes-list {
+  max-width: 700px;
+}
+.note-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.note-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+  transform: translateX(5px);
+}
+.note-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+.note-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.note-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}

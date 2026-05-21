@@ -1,59 +1,93 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Diary Pro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome! ✨ Student Diary</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/context-menu.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body data-theme="light">
-    <div id="particles-js"></div>
-    <div class="container">
-        <header class="header">
-			<div class="theme-switcher">
-    <button class="theme-btn light" data-theme="light">☀️</button>
-    <button class="theme-btn dark" data-theme="dark">🌙</button>
-    <button class="theme-btn mystic" data-theme="mystic">🔮</button>
-</div>
-            <h1 class="magic-text">🔮 Enchanted Diary of Affan ✨</h1>
-            <div class="controls">
-                <!-- Theme and font controls... -->
-                <div class="mood-picker">
-                    <span class="mood-label">Mood:</span>
-                    <div class="mood-options">
-                        <button class="mood-btn" data-mood="😊" title="Happy">😊</button>
-                        <button class="mood-btn" data-mood="😢" title="Sad">😢</button>
-                        <button class="mood-btn" data-mood="😠" title="Angry">😠</button>
-                        <button class="mood-btn" data-mood="🤔" title="Thoughtful">🤔</button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main class="editor">
-            <div class="writing-area">
-                <input type="text" id="noteTitle" class="title-input" placeholder="Entry Title...">
-                <div class="toolbar">
-                    <button onclick="toggleDrawingCanvas()" title="Draw">🎨</button>
-                    <button onclick="formatText('**')" title="Bold">B</button>
-                    <button onclick="formatText('*')" title="Italic">I</button>
-                    <button onclick="insertEmoji('⭐')" title="Star">⭐</button>
-                </div>
-                <textarea id="noteContent" class="content-input" placeholder="Write your heart out... (Markdown supported)"></textarea>
-                <canvas id="drawingCanvas" class="hidden"></canvas>
-                <div id="markdownPreview" class="preview"></div>
-            </div>
-            <button class="save-btn" onclick="saveNote()">💾 Save Entry</button>
-        </main>
-
-        <!-- Saved notes section... -->
+<body class="light">
+  <div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-emojis">
+      <span class="emoji pen">✒️</span>
+      <span class="emoji page">📄</span>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <h1 class="preloader-title">Student Diary & Notes</h1>
+    <p class="preloader-tagline">Your daily companion</p>
+    <div class="preloader-progress-bar">
+      <div class="progress-fill" id="preloader-fill"></div>
+    </div>
+    <p class="preloader-counter"><span id="preloader-percent">0</span>%</p>
+  </div>
+</div>
+  <div id="main-content" class="fade-in">
+    <header>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="logo">📖 Student Diary</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="output.html">Output</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="creator.html">Creator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="dashboard-hero">
+        <h2>Welcome back, student!</h2>
+        <p>Track your thoughts, notes, and growth.</p>
+      </section>
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <span class="stat-number" id="diary-count">0</span>
+          <span class="stat-label">Diary Entries</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="notes-count">0</span>
+          <span class="stat-label">Notes</span>
+        </div>
+      </div>
+      <section class="recent-section">
+        <h3>Recent Diary Entries</h3>
+        <div id="recent-diary" class="recent-list">
+          <!-- dynamically filled -->
+        </div>
+      </section>
+      <section class="recent-section">
+        <h3>Recent Notes</h3>
+        <div id="recent-notes" class="recent-list">
+          <!-- dynamically filled -->
+        </div>
+      </section>
+      <div class="dashboard-actions">
+        <a href="diary.html" class="btn primary-btn">Go to Diary</a>
+        <a href="notes.html" class="btn primary-btn">Go to Notes</a>
+      </div>
+    </main>
+    <footer>
+      <p>© 2025 Student Diary & Notes | Affan Adil</p>
+    </footer>
+  </div>
+  <div id="context-menu" class="context-menu" style="display:none;"></div>
+  <div id="toast-container" class="toast-container"></div>
+  <script src="js/common.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/custom-cursor.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/context-menu.js"></script>
+  <script src="js/click-sound.js"></script>
+  <script src="js/tab-title.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/achievements.js"></script>
 </body>
 </html>
