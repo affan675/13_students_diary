@@ -280,9 +280,9 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Created by:** [Your Name/GitHub Username]
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [Your Portfolio Link]
-- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/affan675)
+- Portfolio: [https://affan675.github.io/01_portfolio_v2]
+- Email: affanadil119@gmail.com
 
 ---
 
@@ -300,9 +300,9 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 Have questions or found a bug? 
 
-- 🐛 **Report Issues**: [GitHub Issues](https://github.com/yourusername/students_diary/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/students_diary/discussions)
-- 📧 **Email**: your.email@example.com
+- 🐛 **Report Issues**: [GitHub Issues](https://github.com/affan675/13_students_diary/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/affan675/13_students_diary/discussions)
+- 📧 **Email**: affanadil119@gmail.com
 
 ---
 
